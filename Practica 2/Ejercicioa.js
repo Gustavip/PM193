@@ -9,4 +9,4 @@ const persona = {
 
  const { nombre, edad, direccion: { ciudad, pais } } = persona;
 
-console.log(nombre, edad, ciudad, pais );
+console.log( " Me llamo "+ nombre+ " tengo "+ edad+ " y vivo "+ ciudad );
