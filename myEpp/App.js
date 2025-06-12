@@ -3,21 +3,25 @@
 
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import React,{useState} from 'react';
+
 
 
 // Componente personalizado para mostrar texto
-const Texto = (props) => {
-  const { children } = props
-  return (<Text>{children}</Text>)
-  
+const Texto = () => {
+  const [contenido,setContenido]=useState('Hola mundo')
+  const actualizaTexto=()=>{setContenido('Estado modificado')}
+  return(
+  <Text onPress={actualizaTexto}> {contenido} </Text>
+  )
 }
 // zona 2 main 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Texto>hola</Texto>  
-      <Texto>mundo</Texto>
-      <Texto>react native</Texto>
+      <Texto></Texto>  
+      <Texto></Texto>
+      <Texto></Texto>
       <Button title="Precionar"> </Button>
       <StatusBar style="auto" />
     </View>
