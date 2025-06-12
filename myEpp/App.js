@@ -7,17 +7,17 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 
 // Componente personalizado para mostrar texto
 const Texto = (props) => {
-  const { contenido } = props
-  return (<Text>{contenido}</Text>)
+  const { children } = props
+  return (<Text>{children}</Text>)
   
 }
 // zona 2 main 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Texto contenido="Hola" />
-      <Texto contenido="mundo" />
-      <Texto contenido="React Native" />
+      <Texto>hola</Texto>  
+      <Texto>mundo</Texto>
+      <Texto>react native</Texto>
       <Button title="Precionar"> </Button>
       <StatusBar style="auto" />
     </View>
